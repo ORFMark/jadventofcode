@@ -1,15 +1,8 @@
 package com.adventofcode;
 
-import problems.Problem;
-import problems.twentyone.dayfive.HydrothermalVentsPart1;
-import problems.twentyone.dayfour.GiantSquidPart1;
-import problems.twentyone.dayfour.GiantSquidPart2;
-import problems.twentyone.dayone.SonarSweepPart1;
-import problems.twentyone.dayone.SonarSweepPart2;
-import problems.twentyone.daythree.BinaryDiagnosticPart1;
-import problems.twentyone.daythree.BinaryDiagnosticPart2;
-import problems.twentyone.daytwo.DivePart1;
-import problems.twentyone.daytwo.DivePart2;
+import com.adventofcode.problems.Problem;
+import com.adventofcode.problems.twentyone.dayone.SonarSweepPart1;
+
 
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -19,11 +12,10 @@ import java.util.List;
 public class Main {
 
     public static void main(String[] args) {
-	List<Problem> problemList = new LinkedList<>();
+	  List<Problem> problemList = new LinkedList<>();
     List<String> inputList = new LinkedList<>();
     try {
         inputList.add(readInputFromFile("ProblemInput/2021/Day1SonarSweep/SonarSweep.txt"));
-
     } catch (Exception e) {
         System.out.println("Invalid File Path! Can't read input");
         return;
