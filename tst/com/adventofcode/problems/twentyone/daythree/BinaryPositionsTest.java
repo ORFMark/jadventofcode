@@ -7,11 +7,11 @@ import static org.junit.jupiter.api.Assertions.*;
 class BinaryPositionsTest {
 
     @Test()
-    void badInputShouldThrowRuntimeException() {
+    void badInputShouldThrowIllegalArgument() {
         try {
             new BinaryPositions("12345");
         } catch (Exception e) {
-            assertEquals(RuntimeException.class, e.getClass());
+            assertEquals(IllegalArgumentException.class, e.getClass());
         }
     }
 
