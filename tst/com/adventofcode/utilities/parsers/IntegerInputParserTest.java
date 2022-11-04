@@ -1,5 +1,6 @@
 package com.adventofcode.utilities.parsers;
 
+import com.adventofcode.utilities.parsers.numerics.IntegerInputParser;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;
@@ -20,7 +21,7 @@ class IntegerInputParserTest {
     @Test
     void testEmptyString() {
         IntegerInputParser testParser = new IntegerInputParser();
-        List testList = testParser.splitInputIntoElements("");
+        List<Integer> testList = testParser.splitInputIntoElements("");
         assertTrue(testList.isEmpty());
     }
 
@@ -34,7 +35,7 @@ class IntegerInputParserTest {
     void testOneElementString() {
         String expectedInput = "1";
         IntegerInputParser testParser = new IntegerInputParser();
-        List testList = testParser.splitInputIntoElements(expectedInput);
+        List<Integer> testList = testParser.splitInputIntoElements(expectedInput);
         assertFalse(testList.isEmpty());
         assertEquals(1, testList.size());
         assertEquals(1, testList.get(0));
@@ -44,7 +45,7 @@ class IntegerInputParserTest {
     void testOneElementStringWithNewLine() {
         String expectedInput = "1\n";
         IntegerInputParser testParser = new IntegerInputParser();
-        List testList = testParser.splitInputIntoElements(expectedInput);
+        List<Integer> testList = testParser.splitInputIntoElements(expectedInput);
         assertFalse(testList.isEmpty());
         assertEquals(1, testList.size());
         assertEquals(1, testList.get(0));
@@ -54,7 +55,7 @@ class IntegerInputParserTest {
     void testMultiElementString() {
         String expectedInput = "1\n2";
         IntegerInputParser testParser = new IntegerInputParser();
-        List testList = testParser.splitInputIntoElements(expectedInput);
+        List<Integer> testList = testParser.splitInputIntoElements(expectedInput);
         assertFalse(testList.isEmpty());
         assertEquals(2, testList.size());
         assertEquals(1, testList.get(0));

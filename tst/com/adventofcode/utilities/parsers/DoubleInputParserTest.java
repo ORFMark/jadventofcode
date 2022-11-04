@@ -1,5 +1,6 @@
 package com.adventofcode.utilities.parsers;
 
+import com.adventofcode.utilities.parsers.numerics.DoubleInputParser;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;
@@ -17,7 +18,7 @@ class DoubleInputParserTest {
   @Test
   void testEmptyString() {
     DoubleInputParser testParser = new DoubleInputParser();
-    List testList = testParser.splitInputIntoElements("");
+    List<Double> testList = testParser.splitInputIntoElements("");
     assertTrue(testList.isEmpty());
   }
 
@@ -31,7 +32,7 @@ class DoubleInputParserTest {
   void testOneElementString() {
     String expectedInput = "1";
     DoubleInputParser testParser = new DoubleInputParser();
-    List testList = testParser.splitInputIntoElements(expectedInput);
+    List<Double> testList = testParser.splitInputIntoElements(expectedInput);
     assertFalse(testList.isEmpty());
     assertEquals(1, testList.size());
     assertEquals(1.0, testList.get(0));
@@ -41,7 +42,7 @@ class DoubleInputParserTest {
   void testOneElementStringWithNewLine() {
     String expectedInput = "1\n";
     DoubleInputParser testParser = new DoubleInputParser();
-    List testList = testParser.splitInputIntoElements(expectedInput);
+    List<Double> testList = testParser.splitInputIntoElements(expectedInput);
     assertFalse(testList.isEmpty());
     assertEquals(1.0, testList.size());
     assertEquals(1.0, testList.get(0));
@@ -51,7 +52,7 @@ class DoubleInputParserTest {
   void testMultiElementString() {
     String expectedInput = "1\n2.5";
     DoubleInputParser testParser = new DoubleInputParser();
-    List testList = testParser.splitInputIntoElements(expectedInput);
+    List<Double> testList = testParser.splitInputIntoElements(expectedInput);
     assertFalse(testList.isEmpty());
     assertEquals(2, testList.size());
     assertEquals(1.0, testList.get(0));

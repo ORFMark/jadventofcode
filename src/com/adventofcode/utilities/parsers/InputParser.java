@@ -4,5 +4,14 @@ import java.util.List;
 
 public interface InputParser<INPUT_TYPE> {
 
-  List<INPUT_TYPE> splitInputIntoElements(String problemInput);
+
+  default List<INPUT_TYPE> splitInputIntoElements(String problemInput) {
+    return splitInputIntoElements(problemInput, "\n");
+  }
+
+
+  List<INPUT_TYPE> splitInputIntoElements(String problemInput, String deliminatorRegex);
+
+
+
 }

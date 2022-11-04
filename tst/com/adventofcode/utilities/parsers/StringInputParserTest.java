@@ -1,7 +1,7 @@
 package com.adventofcode.utilities.parsers;
 
 import org.junit.jupiter.api.Test;
-import com.adventofcode.utilities.parsers.StringInputParser;
+import com.adventofcode.utilities.parsers.text.StringInputParser;
 
 import java.util.List;
 
@@ -21,7 +21,7 @@ class StringInputParserTest {
     @Test
     void testEmptyString() {
         StringInputParser testParser = new StringInputParser();
-        List testList = testParser.splitInputIntoElements("");
+        List<String> testList = testParser.splitInputIntoElements("");
         assertTrue(testList.isEmpty());
     }
 
@@ -29,7 +29,7 @@ class StringInputParserTest {
     void testOneElementString() {
         String expectedInput = "hello!";
         StringInputParser testParser = new StringInputParser();
-        List testList = testParser.splitInputIntoElements(expectedInput);
+        List<String> testList = testParser.splitInputIntoElements(expectedInput);
         assertFalse(testList.isEmpty());
         assertEquals(1, testList.size());
         assertEquals(expectedInput, testList.get(0));
@@ -39,7 +39,7 @@ class StringInputParserTest {
     void testOneElementStringWithNewLine() {
         String expectedInput = "hello!\n";
         StringInputParser testParser = new StringInputParser();
-        List testList = testParser.splitInputIntoElements(expectedInput);
+        List<String> testList = testParser.splitInputIntoElements(expectedInput);
         assertFalse(testList.isEmpty());
         assertEquals(1, testList.size());
         assertEquals("hello!", testList.get(0));
@@ -49,7 +49,18 @@ class StringInputParserTest {
     void testMultiElementString() {
         String expectedInput = "hello!\nGoodBye!";
         StringInputParser testParser = new StringInputParser();
-        List testList = testParser.splitInputIntoElements(expectedInput);
+        List<String> testList = testParser.splitInputIntoElements(expectedInput);
+        assertFalse(testList.isEmpty());
+        assertEquals(2, testList.size());
+        assertEquals("hello!", testList.get(0));
+        assertEquals("GoodBye!", testList.get(1));
+    }
+
+    @Test
+    void testMultiElementStringWithCommaDeliminator() {
+        String expectedInput = "hello!,GoodBye!";
+        StringInputParser testParser = new StringInputParser();
+        List<String> testList = testParser.splitInputIntoElements(expectedInput, ",");
         assertFalse(testList.isEmpty());
         assertEquals(2, testList.size());
         assertEquals("hello!", testList.get(0));

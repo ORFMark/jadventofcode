@@ -1,7 +1,7 @@
 package com.adventofcode.problems.nineteen.dayone;
 
 import com.adventofcode.problems.Problem;
-import com.adventofcode.utilities.parsers.IntegerInputParser;
+import com.adventofcode.utilities.parsers.numerics.IntegerInputParser;
 
 import java.util.List;
 
