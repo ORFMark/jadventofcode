@@ -1,11 +1,11 @@
 package com.adventofcode.problems.nineteen.dayone;
 
-import com.adventofcode.problems.Problem;
+import com.adventofcode.problems.InsturmentedProblem;
 import com.adventofcode.utilities.parsers.numerics.IntegerInputParser;
 
 import java.util.List;
 
-public class RocketEquationPart1 implements Problem {
+public class RocketEquationPart1 extends InsturmentedProblem {
 
   @Override
   public String run(String input) {

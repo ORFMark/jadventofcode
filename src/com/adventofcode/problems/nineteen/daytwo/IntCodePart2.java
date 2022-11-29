@@ -1,13 +1,13 @@
 package com.adventofcode.problems.nineteen.daytwo;
 
-import com.adventofcode.problems.Problem;
+import com.adventofcode.problems.InsturmentedProblem;
 import com.adventofcode.utilities.nineteen.intcode.Computer;
 import com.adventofcode.utilities.parsers.numerics.IntegerInputParser;
 
 import java.util.LinkedList;
 import java.util.List;
 
-public class IntCodePart2 implements Problem {
+public class IntCodePart2 extends InsturmentedProblem {
 
   @Override
   public String run(String input) {

@@ -1,10 +1,11 @@
 package com.adventofcode.problems.twentyone.daytwo;
 
-import com.adventofcode.problems.Problem;
+
+import com.adventofcode.problems.InsturmentedProblem;
 
 import java.util.List;
 
-public class DivePart1 implements Problem {
+public class DivePart1 extends InsturmentedProblem {
 
     public String run(String input) {
         int depth = 0;

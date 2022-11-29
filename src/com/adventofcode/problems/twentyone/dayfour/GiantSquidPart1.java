@@ -1,12 +1,12 @@
 package com.adventofcode.problems.twentyone.dayfour;
 
-import com.adventofcode.problems.Problem;
+import com.adventofcode.problems.InsturmentedProblem;
 import com.adventofcode.utilities.parsers.text.StringInputParser;
 
 import java.util.LinkedList;
 import java.util.List;
 
-public class GiantSquidPart1 implements Problem {
+public class GiantSquidPart1 extends InsturmentedProblem {
 
     public String run(String input) {
         List<BingoBoard> boards = new LinkedList<>();

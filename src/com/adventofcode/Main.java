@@ -1,7 +1,9 @@
 package com.adventofcode;
 
+import com.adventofcode.problems.InsturmentedProblem;
 import com.adventofcode.problems.Problem;
 import com.adventofcode.problems.twentyone.dayone.SonarSweepPart1;
+import com.adventofcode.problems.twentyone.dayone.SonarSweepPart2;
 
 
 import java.io.FileInputStream;
@@ -12,21 +14,18 @@ import java.util.List;
 public class Main {
 
     public static void main(String[] args) {
-	  List<Problem> problemList = new LinkedList<>();
-    List<String> inputList = new LinkedList<>();
+	  List<ProblemPair> problemList = new LinkedList<>();
     try {
-        inputList.add(readInputFromFile("ProblemInput/2021/Day1SonarSweep/SonarSweep.txt"));
+        problemList.add(new ProblemPair(new SonarSweepPart1(), readInputFromFile("ProblemInput/2021/Day1SonarSweep/SonarSweep.txt")));
+        problemList.add(new ProblemPair(new SonarSweepPart2(), readInputFromFile("ProblemInput/2021/Day1SonarSweep/SonarSweep.txt")));
     } catch (Exception e) {
         System.out.println("Invalid File Path! Can't read input");
         return;
     }
-    problemList.add(new SonarSweepPart1());
-    int dayNumber = 0;
-    for (Problem prob : problemList) {
-        System.out.printf("Day %d Part %d: ", (dayNumber/2) +1, (dayNumber % 2) + 1);
-        System.out.println(prob.run(inputList.get(0)));
-        inputList.remove(0);
-        dayNumber++;
+    for (ProblemPair probPair : problemList) {
+        InsturmentedProblem prob = probPair.problem;
+        String input = probPair.input;
+        System.out.printf("%s\n\t result: %s\n\t running time: %.02f milliseconds\n\t memory used: %d bytes\n", prob.getIdentifer(), prob.runWithInstrumentation(input), ((double) prob.getRunTimeInNanoSeconds())/100000.0, prob.getMemoryUsedInBytes());
     }
 
     }
@@ -43,6 +42,16 @@ public class Main {
         }
 
         return input;
+    }
+
+    private static class ProblemPair {
+        public final InsturmentedProblem problem;
+        public final String input;
+
+        ProblemPair(InsturmentedProblem problem, String input) {
+            this.problem = problem;
+            this.input = input;
+        }
     }
 }
 

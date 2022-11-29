@@ -1,11 +1,12 @@
 package com.adventofcode.problems.twentyone.dayone;
 
-import com.adventofcode.problems.Problem;
+
+import com.adventofcode.problems.InsturmentedProblem;
 
 import java.util.LinkedList;
 import java.util.List;
 
-public class SonarSweepPart2 implements Problem {
+public class SonarSweepPart2 extends InsturmentedProblem {
 
 
     public String run(String input) {
