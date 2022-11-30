@@ -1,7 +1,7 @@
 package com.adventofcode.problems.twentyone.dayfour;
 
-import com.adventofcode.problems.InsturmentedProblem;
-import com.adventofcode.utilities.parsers.text.StringInputParser;
+import com.adventofcode.utilities.general.diagnostics.InsturmentedProblem;
+import com.adventofcode.utilities.general.parsers.text.StringInputParser;
 import java.util.LinkedList;
 import java.util.List;
 

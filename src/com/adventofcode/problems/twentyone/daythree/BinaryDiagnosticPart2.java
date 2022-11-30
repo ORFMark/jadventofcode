@@ -1,7 +1,7 @@
 package com.adventofcode.problems.twentyone.daythree;
 
 
-import com.adventofcode.problems.InsturmentedProblem;
+import com.adventofcode.utilities.general.diagnostics.InsturmentedProblem;
 
 import java.util.List;
 

@@ -1,7 +1,6 @@
 package com.adventofcode;
 
-import com.adventofcode.problems.InsturmentedProblem;
-import com.adventofcode.problems.Problem;
+import com.adventofcode.utilities.general.diagnostics.InsturmentedProblem;
 import com.adventofcode.problems.twentyone.dayone.SonarSweepPart1;
 import com.adventofcode.problems.twentyone.dayone.SonarSweepPart2;
 

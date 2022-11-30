@@ -1,4 +1,4 @@
-package com.adventofcode.problems;
+package com.adventofcode.utilities.general.diagnostics;
 
 import com.adventofcode.problems.Problem;
 

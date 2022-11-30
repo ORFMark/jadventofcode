@@ -1,7 +1,7 @@
-package com.adventofcode.utilities.parsers;
+package com.adventofcode.utilities.general.parsers;
 
 import org.junit.jupiter.api.Test;
-import com.adventofcode.utilities.parsers.text.StringInputParser;
+import com.adventofcode.utilities.general.parsers.text.StringInputParser;
 
 import java.util.List;
 

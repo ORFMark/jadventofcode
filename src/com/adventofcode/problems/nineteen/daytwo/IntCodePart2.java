@@ -1,8 +1,8 @@
 package com.adventofcode.problems.nineteen.daytwo;
 
-import com.adventofcode.problems.InsturmentedProblem;
+import com.adventofcode.utilities.general.diagnostics.InsturmentedProblem;
 import com.adventofcode.utilities.nineteen.intcode.Computer;
-import com.adventofcode.utilities.parsers.numerics.IntegerInputParser;
+import com.adventofcode.utilities.general.parsers.numerics.IntegerInputParser;
 
 import java.util.LinkedList;
 import java.util.List;

@@ -1,7 +1,7 @@
 package com.adventofcode.problems;
 
 import com.adventofcode.problems.twentyone.dayone.SonarSweepPart1;
-import org.junit.jupiter.api.BeforeEach;
+import com.adventofcode.utilities.general.diagnostics.InsturmentedProblem;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;

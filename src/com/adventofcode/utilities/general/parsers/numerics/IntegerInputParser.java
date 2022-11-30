@@ -1,7 +1,9 @@
-package com.adventofcode.utilities.parsers.numerics;
+package com.adventofcode.utilities.general.parsers.numerics;
 
-import com.adventofcode.utilities.parsers.InputParser;
-import com.adventofcode.utilities.parsers.text.StringInputParser;
+import com.adventofcode.utilities.general.parsers.InputParser;
+import com.adventofcode.utilities.general.parsers.text.StringInputParser;
+import com.adventofcode.utilities.general.parsers.InputParser;
+import com.adventofcode.utilities.general.parsers.text.StringInputParser;
 
 import java.util.LinkedList;
 import java.util.List;

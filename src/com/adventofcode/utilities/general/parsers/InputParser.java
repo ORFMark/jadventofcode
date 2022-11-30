@@ -1,4 +1,4 @@
-package com.adventofcode.utilities.parsers;
+package com.adventofcode.utilities.general.parsers;
 
 import java.util.List;
 

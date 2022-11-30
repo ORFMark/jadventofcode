@@ -1,7 +1,7 @@
 package com.adventofcode.problems.twentyone.dayfive;
 
 
-import com.adventofcode.problems.InsturmentedProblem;
+import com.adventofcode.utilities.general.diagnostics.InsturmentedProblem;
 
 public class HydrothermalVentsPart1 extends InsturmentedProblem {
 

@@ -1,6 +1,6 @@
 package com.adventofcode.problems.twentyone.daythree;
 
-import com.adventofcode.utilities.parsers.text.StringInputParser;
+import com.adventofcode.utilities.general.parsers.text.StringInputParser;
 
 import java.util.*;
 import java.util.concurrent.ConcurrentLinkedQueue;

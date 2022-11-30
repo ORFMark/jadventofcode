@@ -1,6 +1,6 @@
-package com.adventofcode.utilities.parsers;
+package com.adventofcode.utilities.general.parsers;
 
-import com.adventofcode.utilities.parsers.numerics.DoubleInputParser;
+import com.adventofcode.utilities.general.parsers.numerics.DoubleInputParser;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;

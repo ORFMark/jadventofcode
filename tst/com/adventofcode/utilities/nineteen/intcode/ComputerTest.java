@@ -1,6 +1,6 @@
 package com.adventofcode.utilities.nineteen.intcode;
 
-import com.adventofcode.utilities.parsers.numerics.IntegerInputParser;
+import com.adventofcode.utilities.general.parsers.numerics.IntegerInputParser;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
