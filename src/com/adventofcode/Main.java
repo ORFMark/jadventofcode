@@ -1,8 +1,9 @@
 package com.adventofcode;
 
+import com.adventofcode.problems.twentytwo.day1.CalorieCountingPart1;
+import com.adventofcode.problems.twentytwo.day1.CalorieCountingPart2;
 import com.adventofcode.utilities.general.diagnostics.InsturmentedProblem;
-import com.adventofcode.problems.twentyone.dayone.SonarSweepPart1;
-import com.adventofcode.problems.twentyone.dayone.SonarSweepPart2;
+
 
 
 import java.io.FileInputStream;
@@ -15,8 +16,8 @@ public class Main {
     public static void main(String[] args) {
 	  List<ProblemPair> problemList = new LinkedList<>();
     try {
-        problemList.add(new ProblemPair(new SonarSweepPart1(), readInputFromFile("ProblemInput/2021/Day1SonarSweep/SonarSweep.txt")));
-        problemList.add(new ProblemPair(new SonarSweepPart2(), readInputFromFile("ProblemInput/2021/Day1SonarSweep/SonarSweep.txt")));
+        problemList.add(new ProblemPair(new CalorieCountingPart1(), readInputFromFile("ProblemInput/2022/Day1CalorieCounting/Part1")));
+        problemList.add(new ProblemPair(new CalorieCountingPart2(), readInputFromFile("ProblemInput/2022/Day1CalorieCounting/Part1")));
     } catch (Exception e) {
         System.out.println("Invalid File Path! Can't read input");
         return;
