@@ -1,6 +1,7 @@
 package com.adventofcode.problems.twentytwo.day1;
 
 import com.adventofcode.problems.twentytwo.day1.data.ElfBackpack;
+import com.adventofcode.problems.twentytwo.day1.data.ElfExpedition;
 import com.adventofcode.problems.twentytwo.day1.parser.ElfBackpackParser;
 import com.adventofcode.utilities.general.diagnostics.DiagnosticStringGenerator;
 import com.adventofcode.utilities.general.diagnostics.DiagnosticsConstants;
@@ -19,21 +20,12 @@ public class CalorieCountingPart2 extends InsturmentedProblem {
 
   @Override
   public String run(String input) {
+    ElfExpedition expedition = new ElfExpedition();
     List<ElfBackpack> elves = new ElfBackpackParser().splitInputIntoElements(input, "\n");
-    List<ElfBackpack> hoardingElves = new LinkedList<>();
-    for (ElfBackpack elfBackpack : elves) {
-      if(hoardingElves.size() < 3) {
-        hoardingElves.add(elfBackpack);
-      } else if (hoardingElves.get(2).sumBackback() < elfBackpack.sumBackback()) {
-        hoardingElves.set(2, elfBackpack);
-      }
-      hoardingElves.sort((o1, o2) -> o2.sumBackback() - o1.sumBackback());
+    for(ElfBackpack elf : elves) {
+      expedition.addElf(elf);
     }
-    int hoardedCalories = 0;
-    for(ElfBackpack hoard : hoardingElves) {
-      hoardedCalories += hoard.sumBackback();
-    }
-    return Integer.toString(hoardedCalories);
+    return Integer.toString(expedition.computeHoardedCalories());
   }
 
   public String getIdentifer() {

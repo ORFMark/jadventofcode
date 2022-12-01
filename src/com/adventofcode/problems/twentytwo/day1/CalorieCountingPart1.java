@@ -1,6 +1,7 @@
 package com.adventofcode.problems.twentytwo.day1;
 
 import com.adventofcode.problems.twentytwo.day1.data.ElfBackpack;
+import com.adventofcode.problems.twentytwo.day1.data.ElfExpedition;
 import com.adventofcode.problems.twentytwo.day1.parser.ElfBackpackParser;
 import com.adventofcode.utilities.general.diagnostics.DiagnosticStringGenerator;
 import com.adventofcode.utilities.general.diagnostics.DiagnosticsConstants;
@@ -20,13 +21,11 @@ public class CalorieCountingPart1 extends InsturmentedProblem {
   @Override
   public String run(String input) {
     List<ElfBackpack> elves = new ElfBackpackParser().splitInputIntoElements(input, "\n");
-    ElfBackpack maxBackpack = null;
-    for (ElfBackpack elfBackpack : elves) {
-      if(maxBackpack == null || elfBackpack.sumBackback() > maxBackpack.sumBackback()) {
-        maxBackpack = elfBackpack;
-      }
+    ElfExpedition expedition = new ElfExpedition();
+    for (ElfBackpack elf : elves) {
+      expedition.addElf(elf);
     }
-    return Integer.toString(maxBackpack.sumBackback());
+    return Integer.toString(expedition.findElfWithTheMostFood().sumBackback());
   }
 
   public String getIdentifer() {
