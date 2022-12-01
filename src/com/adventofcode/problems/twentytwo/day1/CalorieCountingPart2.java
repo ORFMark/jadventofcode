@@ -6,10 +6,7 @@ import com.adventofcode.problems.twentytwo.day1.parser.ElfBackpackParser;
 import com.adventofcode.utilities.general.diagnostics.DiagnosticStringGenerator;
 import com.adventofcode.utilities.general.diagnostics.DiagnosticsConstants;
 import com.adventofcode.utilities.general.diagnostics.InsturmentedProblem;
-import com.adventofcode.utilities.general.parsers.numerics.IntegerInputParser;
-import com.adventofcode.utilities.general.parsers.text.StringInputParser;
 
-import java.util.LinkedList;
 import java.util.List;
 
 public class CalorieCountingPart2 extends InsturmentedProblem {
@@ -22,9 +19,7 @@ public class CalorieCountingPart2 extends InsturmentedProblem {
   public String run(String input) {
     ElfExpedition expedition = new ElfExpedition();
     List<ElfBackpack> elves = new ElfBackpackParser().splitInputIntoElements(input, "\n");
-    for(ElfBackpack elf : elves) {
-      expedition.addElf(elf);
-    }
+    expedition.addElves(elves);
     return Integer.toString(expedition.computeHoardedCalories());
   }
 
