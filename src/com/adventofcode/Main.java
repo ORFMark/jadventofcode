@@ -23,7 +23,7 @@ public class Main {
         System.out.println("Invalid File Path! Can't read input");
         return;
     }
-    System.out.println(String.format("Note: diagnostics are the average of %d measured iterations after %d warmups", DiagnosticsConstants.MEASURED_ITERATIONS, DiagnosticsConstants.WARMUP_ITERATIONS));
+    System.out.printf("Note: diagnostics are the average of %d measured iterations after %d warmups%n", DiagnosticsConstants.MEASURED_ITERATIONS, DiagnosticsConstants.WARMUP_ITERATIONS);
     for (ProblemPair probPair : problemList) {
         InsturmentedProblem prob = probPair.problem;
         String input = probPair.input;
@@ -47,14 +47,8 @@ public class Main {
         return input;
     }
 
-    private static class ProblemPair {
-        public final InsturmentedProblem problem;
-        public final String input;
-
-        ProblemPair(InsturmentedProblem problem, String input) {
-            this.problem = problem;
-            this.input = input;
-        }
+    private record ProblemPair(InsturmentedProblem problem,
+                               String input) {
     }
 }
 

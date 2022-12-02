@@ -12,5 +12,6 @@ My goals when solving these
 I solved the puzzles in the following order
 ```
 1. 2021 days 1-5
-2. 2019 days 1-24
+2. 2019 days 1-2
+3. 2022 Day 1
 ```
