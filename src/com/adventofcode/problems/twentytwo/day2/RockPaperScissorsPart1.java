@@ -8,7 +8,7 @@ import java.util.List;
 
 public class RockPaperScissorsPart1 extends InsturmentedProblem {
 
-    private static final String PROBLEM_NAME = "";
+    private static final String PROBLEM_NAME = "RockPaperScissiors";
     private static final int YEAR = 2022;
     private static final int DAY = 2;
     private static final int PART = 1;
