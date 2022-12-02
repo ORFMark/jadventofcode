@@ -17,8 +17,8 @@ public class Main {
     public static void main(String[] args) {
 	  List<ProblemPair> problemList = new LinkedList<>();
     try {
-        problemList.add(new ProblemPair(new RockPaperScissorsPart1(), readInputFromFile("ProblemInput/2021/2022/Day2RockPaperScissors")));
-        problemList.add(new ProblemPair(new RockPaperScissorsPart2(), readInputFromFile("ProblemInput/2021/2022/Day2RockPaperScissors")));
+        problemList.add(new ProblemPair(new RockPaperScissorsPart1(), readInputFromFile("ProblemInput/2022/Day2RockPaperScissors/input")));
+        problemList.add(new ProblemPair(new RockPaperScissorsPart2(), readInputFromFile("ProblemInput/2022/Day2RockPaperScissors/input")));
     } catch (Exception e) {
         System.out.println("Invalid File Path! Can't read input");
         return;
@@ -27,8 +27,9 @@ public class Main {
     for (ProblemPair probPair : problemList) {
         InsturmentedProblem prob = probPair.problem;
         String input = probPair.input;
-        System.out.printf("%s%n\t result: %s%n\t running time: %.02f milliseconds%n\t memory used: %d bytes%n", prob.getIdentifer(), prob.runWithPerciseInstrumentation(input,
-                DiagnosticsConstants.WARMUP_ITERATIONS, DiagnosticsConstants.MEASURED_ITERATIONS), ( prob.getRunTimeInNanoSeconds())/100000.0, prob.getMemoryUsedInBytes());
+        String result = prob.runWithPerciseInstrumentation(input,
+                DiagnosticsConstants.WARMUP_ITERATIONS, DiagnosticsConstants.MEASURED_ITERATIONS);
+        System.out.printf("%s%n\t result: %s%n\t running time: %.02f milliseconds%n\t memory used: %d bytes%n", prob.getIdentifer(),result,( prob.getRunTimeInNanoSeconds())/1000000.0, prob.getMemoryUsedInBytes());
     }
 
     }
