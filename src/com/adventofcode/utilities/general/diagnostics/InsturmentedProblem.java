@@ -2,6 +2,9 @@ package com.adventofcode.utilities.general.diagnostics;
 
 import com.adventofcode.problems.Problem;
 
+import java.util.LinkedList;
+import java.util.List;
+
 public abstract class InsturmentedProblem implements Problem {
 
   public long getRunTimeInNanoSeconds() {
@@ -31,5 +34,31 @@ public abstract class InsturmentedProblem implements Problem {
       memoryUsedInBytes = endingMemory - startingMemory;
     }
     return result;
+  }
+
+  public String runWithPerciseInstrumentation(String input, int numberOfWarmupIterations, int numberOfMeasuredIterations) {
+    String result = this.runWithInstrumentation(input);
+    List<Long> memoryUsedData = new LinkedList<>();
+    List<Long> runtimeUsedData = new LinkedList<>();
+    for(int iter = 1; iter < numberOfWarmupIterations + numberOfMeasuredIterations; iter++) {
+      if(iter >= numberOfWarmupIterations) {
+        memoryUsedData.add(memoryUsedInBytes);
+        runtimeUsedData.add(runTimeInNanoSeconds);
+      }
+    }
+    memoryUsedInBytes = averageOfAList(memoryUsedData);
+    runTimeInNanoSeconds = averageOfAList(runtimeUsedData);
+    return result;
+  }
+
+  private Long averageOfAList(List<Long> listToAverage) {
+    long sum = 0;
+    if(listToAverage.isEmpty()) {
+      return 0l;
+    }
+    for(Long item : listToAverage) {
+      sum += item;
+    }
+    return sum/listToAverage.size();
   }
 }

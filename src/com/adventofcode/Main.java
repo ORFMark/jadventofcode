@@ -2,6 +2,7 @@ package com.adventofcode;
 
 import com.adventofcode.problems.twentytwo.day1.CalorieCountingPart1;
 import com.adventofcode.problems.twentytwo.day1.CalorieCountingPart2;
+import com.adventofcode.utilities.general.diagnostics.DiagnosticsConstants;
 import com.adventofcode.utilities.general.diagnostics.InsturmentedProblem;
 
 
@@ -22,10 +23,12 @@ public class Main {
         System.out.println("Invalid File Path! Can't read input");
         return;
     }
+    System.out.println(String.format("Note: diagnostics are the average of %d measured iterations after %d warmups", DiagnosticsConstants.MEASURED_ITERATIONS, DiagnosticsConstants.WARMUP_ITERATIONS));
     for (ProblemPair probPair : problemList) {
         InsturmentedProblem prob = probPair.problem;
         String input = probPair.input;
-        System.out.printf("%s\n\t result: %s\n\t running time: %.02f milliseconds\n\t memory used: %d bytes\n", prob.getIdentifer(), prob.runWithInstrumentation(input), ((double) prob.getRunTimeInNanoSeconds())/100000.0, prob.getMemoryUsedInBytes());
+        System.out.printf("%s%n\t result: %s%n\t running time: %.02f milliseconds%n\t memory used: %d bytes%n", prob.getIdentifer(), prob.runWithPerciseInstrumentation(input,
+                DiagnosticsConstants.WARMUP_ITERATIONS, DiagnosticsConstants.MEASURED_ITERATIONS), ( prob.getRunTimeInNanoSeconds())/100000.0, prob.getMemoryUsedInBytes());
     }
 
     }

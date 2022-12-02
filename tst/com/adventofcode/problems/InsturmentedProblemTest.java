@@ -37,4 +37,9 @@ class InsturmentedProblemTest {
   void testProblemRunning() {
     assertEquals("7", testProblem.runWithInstrumentation(testInput));
   }
+
+  @Test
+  void testProblemRunningWithPerciseInsturments() {
+    assertEquals("7", testProblem.runWithPerciseInstrumentation(testInput, 2, 10));
+  }
 }
