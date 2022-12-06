@@ -46,6 +46,8 @@ public class SectionAssignment implements Cloneable{
       return true;
     } else if (sectionAssignment.getEndSection() >= startSection && sectionAssignment.getEndSection() <= endSection) {
       return true;
+    } else if (encloses(sectionAssignment) || enclosedBy(sectionAssignment)){
+      return true;
     } else {
       return false;
     }
