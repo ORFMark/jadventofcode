@@ -38,9 +38,9 @@ public class RucksackReorganizationPart2 extends InsturmentedProblem {
         } else {
           badgeSet = badgeSet.intersection(groupMemer.getContents());
         }
-        for (Item badge : badgeSet) {
-          answer += badge.getPriority();
-        }
+      }
+      for (Item badge : badgeSet) {
+        answer += badge.getPriority();
       }
     }
 

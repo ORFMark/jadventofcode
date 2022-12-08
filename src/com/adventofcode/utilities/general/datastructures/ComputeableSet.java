@@ -1,5 +1,6 @@
 package com.adventofcode.utilities.general.datastructures;
 
+import java.util.Collections;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -29,5 +30,4 @@ public class ComputeableSet<T> extends HashSet<T> {
   public boolean isSubsetOf(Set<T> setToCompare) {
     return setToCompare.containsAll(this);
   }
-
 }
