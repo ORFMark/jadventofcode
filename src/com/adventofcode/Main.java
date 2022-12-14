@@ -10,6 +10,8 @@ import com.adventofcode.problems.twentytwo.day4.CampCleanupPart1;
 import com.adventofcode.problems.twentytwo.day4.CampCleanupPart2;
 import com.adventofcode.problems.twentytwo.day6.SignalCleaningPart1;
 import com.adventofcode.problems.twentytwo.day6.SignalCleaningPart2;
+import com.adventofcode.problems.twentytwo.day8.TreeTopHousePart1;
+import com.adventofcode.problems.twentytwo.day8.TreeTopHousePart2;
 import com.adventofcode.utilities.general.diagnostics.DiagnosticsConstants;
 import com.adventofcode.utilities.general.diagnostics.InsturmentedProblem;
 
@@ -35,6 +37,8 @@ public class Main {
         problemList.add(new ProblemPair(new CampCleanupPart2(), readInputFromFile("ProblemInput/2022/Day4CampCleanup/input")));
         problemList.add(new ProblemPair(new SignalCleaningPart1(), readInputFromFile("ProblemInput/2022/Day7SignalCleaning/input")));
         problemList.add(new ProblemPair(new SignalCleaningPart2(), readInputFromFile("ProblemInput/2022/Day7SignalCleaning/input")));
+        problemList.add(new ProblemPair(new TreeTopHousePart1(), readInputFromFile("ProblemInput/2022/Day8TreeHouse/input")));
+        problemList.add(new ProblemPair(new TreeTopHousePart2(), readInputFromFile("ProblemInput/2022/Day8TreeHouse/input")));
     } catch (Exception e) {
         System.out.println("Invalid File Path! Can't read input");
         return;
