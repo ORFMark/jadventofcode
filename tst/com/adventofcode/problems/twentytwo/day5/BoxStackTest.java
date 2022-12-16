@@ -84,4 +84,21 @@ class BoxStackTest {
     assertEquals('a', destinationStack.pop());
   }
 
+  @Test
+  void pullItemsInOrderTest() {
+    List<Character> dataToAdd = new LinkedList<>();
+    dataToAdd.add('a');
+    dataToAdd.add('b');
+    dataToAdd.add('c');
+    BoxStack givingStack = new BoxStack();
+    BoxStack destinationStack = new BoxStack();
+    givingStack.addItems(dataToAdd);
+    destinationStack.pullItemsInOrderFrom(givingStack, 3);
+    assertEquals(0, givingStack.size());
+    assertEquals(3, destinationStack.size());
+    assertEquals('c', destinationStack.pop());
+    assertEquals('b', destinationStack.pop());
+    assertEquals('a', destinationStack.pop());
+  }
+
 }

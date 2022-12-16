@@ -6,11 +6,7 @@ import java.util.List;
 
 public class SupplyData {
 
-
   private final List<BoxStack> boxStacks;
-
-
-
   private final List<MoveInstruction> instructions;
 
   public SupplyData(List<BoxStack> supplyStacks, List<MoveInstruction> instructions) {

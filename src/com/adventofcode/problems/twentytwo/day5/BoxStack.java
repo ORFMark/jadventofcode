@@ -26,7 +26,7 @@ public class BoxStack {
 
   public void moveItemsInOrderTo(BoxStack recevingStack, int numberOfItems) {
     BoxStack temp = new BoxStack();
-    this.moveItemsTo(temp, numberOfItems);
+    temp.pullItemsFrom(this, numberOfItems);
     temp.moveItemsTo(recevingStack, numberOfItems);
   }
 
