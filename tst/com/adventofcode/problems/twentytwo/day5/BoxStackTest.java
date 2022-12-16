@@ -30,6 +30,8 @@ class BoxStackTest {
     testStack.addItems(dataToAdd);
     assertEquals(3, testStack.size());
     assertEquals('c', testStack.pop());
+    assertEquals('b', testStack.pop());
+    assertEquals('a', testStack.pop());
   }
 
   @Test
@@ -41,11 +43,12 @@ class BoxStackTest {
     BoxStack givingStack = new BoxStack();
     BoxStack destinationStack = new BoxStack();
     givingStack.addItems(dataToAdd);
-    givingStack.moveItemsTo(destinationStack, 2);
-    assertEquals(1, givingStack.size());
-    assertEquals(2, destinationStack.size());
-    assertEquals('a', givingStack.pop());
+    givingStack.moveItemsTo(destinationStack, 3);
+    assertEquals(0, givingStack.size());
+    assertEquals(3, destinationStack.size());
+    assertEquals('a', destinationStack.pop());
     assertEquals('b', destinationStack.pop());
+    assertEquals('c', destinationStack.pop());
   }
 
   @Test
@@ -73,11 +76,12 @@ class BoxStackTest {
     BoxStack givingStack = new BoxStack();
     BoxStack destinationStack = new BoxStack();
     givingStack.addItems(dataToAdd);
-    givingStack.moveItemsInOrderTo(destinationStack, 2);
-    assertEquals(1, givingStack.size());
-    assertEquals(2, destinationStack.size());
-    assertEquals('a', givingStack.pop());
+    givingStack.moveItemsInOrderTo(destinationStack, 3);
+    assertEquals(0, givingStack.size());
+    assertEquals(3, destinationStack.size());
     assertEquals('c', destinationStack.pop());
+    assertEquals('b', destinationStack.pop());
+    assertEquals('a', destinationStack.pop());
   }
 
 }

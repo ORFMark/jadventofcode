@@ -39,8 +39,8 @@ public class Main {
         problemList.add(new ProblemPair(new CampCleanupPart2(), readInputFromFile("ProblemInput/2022/Day4CampCleanup/input")));
         problemList.add(new ProblemPair(new SupplyStacksPart1(), readInputFromFile("ProblemInput/2022/Day5SupplyStacks/Input")));
         problemList.add(new ProblemPair(new SupplyStacksPart2(), readInputFromFile("ProblemInput/2022/Day5SupplyStacks/Input")));
-        problemList.add(new ProblemPair(new SignalCleaningPart1(), readInputFromFile("ProblemInput/2022/Day7SignalCleaning/input")));
-        problemList.add(new ProblemPair(new SignalCleaningPart2(), readInputFromFile("ProblemInput/2022/Day7SignalCleaning/input")));
+        problemList.add(new ProblemPair(new SignalCleaningPart1(), readInputFromFile("ProblemInput/2022/Day6SignalCleaning/input")));
+        problemList.add(new ProblemPair(new SignalCleaningPart2(), readInputFromFile("ProblemInput/2022/Day6SignalCleaning/input")));
         problemList.add(new ProblemPair(new TreeTopHousePart1(), readInputFromFile("ProblemInput/2022/Day8TreeHouse/input")));
         problemList.add(new ProblemPair(new TreeTopHousePart2(), readInputFromFile("ProblemInput/2022/Day8TreeHouse/input")));
     } catch (Exception e) {

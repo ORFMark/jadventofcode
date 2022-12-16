@@ -7,11 +7,11 @@ import java.util.List;
 public class SupplyData {
 
 
-  private List<BoxStack> boxStacks;
+  private final List<BoxStack> boxStacks;
 
 
 
-  private List<MoveInstruction> instructions;
+  private final List<MoveInstruction> instructions;
 
   public SupplyData(List<BoxStack> supplyStacks, List<MoveInstruction> instructions) {
     this.boxStacks = new ArrayList<>(supplyStacks);
