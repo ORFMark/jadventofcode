@@ -1,4 +1,4 @@
-package com.adventofcode.utilities.general.parsers;
+package com.adventofcode.utilities.general.parsers.text;
 
 import org.junit.jupiter.api.Test;
 import com.adventofcode.utilities.general.parsers.text.StringInputParser;

@@ -1,11 +1,10 @@
 package com.adventofcode.problems.twentytwo.day5;
 
-import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
-class SupplyStacksPart1Test {
+class SupplyStacksPart2Test {
 
   public static String EXAMPLE_INPUT = """
               [D]   \s
@@ -19,6 +18,6 @@ class SupplyStacksPart1Test {
           move 1 from 1 to 2""";
   @Test
   public void exampleInputTest() {
-    assertEquals("CMZ", new SupplyStacksPart1().run(EXAMPLE_INPUT));
+    assertEquals("MCD", new SupplyStacksPart2().run(EXAMPLE_INPUT));
   }
 }

@@ -4,7 +4,7 @@ import java.util.Collection;
 import java.util.Stack;
 
 public class BoxStack {
-  private Stack<Character> theStack;
+  private final Stack<Character> theStack = new Stack<>();
 
   public void addItem(char valueToAdd) {
     theStack.add(valueToAdd);
@@ -21,12 +21,34 @@ public class BoxStack {
   }
 
   public void pullItemsFrom(BoxStack givingStack, int numberOfItems) {
-    for(int i = 0; i < numberOfItems; i++) {
-      theStack.add(givingStack.pop());
-    }
+    givingStack.moveItemsTo(this, numberOfItems);
+  }
+
+  public void moveItemsInOrderTo(BoxStack recevingStack, int numberOfItems) {
+    BoxStack temp = new BoxStack();
+    this.moveItemsTo(temp, numberOfItems);
+    temp.moveItemsTo(recevingStack, numberOfItems);
+  }
+
+  public void pullItemsInOrderFrom(BoxStack givingStack, int numberOfItems) {
+    givingStack.moveItemsInOrderTo(this, numberOfItems);
   }
 
   public Character pop() {
     return theStack.pop();
   }
+
+  @Override
+  public String toString() {
+    StringBuilder builder = new StringBuilder();
+    for(Character item : theStack) {
+      builder.append(String.format("%c,", item));
+    }
+    return builder.toString();
+  }
+
+  public int size() {
+    return theStack.size();
+  }
+
 }
