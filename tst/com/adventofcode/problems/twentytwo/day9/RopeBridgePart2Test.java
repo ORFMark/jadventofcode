@@ -29,6 +29,14 @@ class RopeBridgePart2Test {
       assertEquals("1", new RopeBridgePart2().run(String.format("U %d", i)), String.format("Failed for %d steps", i));
     }
   }
+
+  @Test
+  void testCompositeInput() {
+    String compositeInput = "R 4\n" +
+            "U 4\n" +
+            "L 2\n";
+    assertEquals("1", new RopeBridgePart2().run(compositeInput));
+  }
   @Test
   void testSingleExtraLongStep() {
     assertEquals("2", new RopeBridgePart2().run("U 10"));
