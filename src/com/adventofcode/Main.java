@@ -2,6 +2,7 @@ package com.adventofcode;
 
 import com.adventofcode.problems.twentytwo.day1.CalorieCountingPart1;
 import com.adventofcode.problems.twentytwo.day1.CalorieCountingPart2;
+import com.adventofcode.problems.twentytwo.day10.CathodeRayTubePart1;
 import com.adventofcode.problems.twentytwo.day2.RockPaperScissorsPart1;
 import com.adventofcode.problems.twentytwo.day2.RockPaperScissorsPart2;
 import com.adventofcode.problems.twentytwo.day3.RucksackReorganizationPart1;
@@ -45,6 +46,7 @@ public class Main {
         problemList.add(new ProblemPair(new TreeTopHousePart1(), readInputFromFile("ProblemInput/2022/Day8TreeHouse/input")));
         problemList.add(new ProblemPair(new TreeTopHousePart2(), readInputFromFile("ProblemInput/2022/Day8TreeHouse/input")));
         problemList.add(new ProblemPair(new RopeBridgePart1(), readInputFromFile("ProblemInput/2022/Day9RopeBridge/input")));
+        problemList.add(new ProblemPair(new CathodeRayTubePart1(), readInputFromFile("ProblemInput/2022/Day10CathodeRay/input")));
     } catch (Exception e) {
         System.out.println("Invalid File Path! Can't read input");
         return;
