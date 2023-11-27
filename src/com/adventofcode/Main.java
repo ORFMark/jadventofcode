@@ -32,21 +32,6 @@ public class Main {
 	  List<ProblemPair> problemList = new LinkedList<>();
     try {
         problemList.add(new ProblemPair(new RockPaperScissorsPart1(), readInputFromFile("ProblemInput/2022/Day2RockPaperScissors/input")));
-        problemList.add(new ProblemPair(new RockPaperScissorsPart2(), readInputFromFile("ProblemInput/2022/Day2RockPaperScissors/input")));
-        problemList.add(new ProblemPair(new CalorieCountingPart1(), readInputFromFile("ProblemInput/2022/Day1CalorieCounting/Part1")));
-        problemList.add(new ProblemPair(new CalorieCountingPart2(), readInputFromFile("ProblemInput/2022/Day1CalorieCounting/Part1")));
-        problemList.add(new ProblemPair(new RucksackReorganizationPart1(), readInputFromFile("ProblemInput/2022/Day3Rucksack/input")));
-        problemList.add(new ProblemPair(new RucksackReorganizationPart2(), readInputFromFile("ProblemInput/2022/Day3Rucksack/input")));
-        problemList.add(new ProblemPair(new CampCleanupPart1(), readInputFromFile("ProblemInput/2022/Day4CampCleanup/input")));
-        problemList.add(new ProblemPair(new CampCleanupPart2(), readInputFromFile("ProblemInput/2022/Day4CampCleanup/input")));
-        problemList.add(new ProblemPair(new SupplyStacksPart1(), readInputFromFile("ProblemInput/2022/Day5SupplyStacks/Input")));
-        problemList.add(new ProblemPair(new SupplyStacksPart2(), readInputFromFile("ProblemInput/2022/Day5SupplyStacks/Input")));
-        problemList.add(new ProblemPair(new SignalCleaningPart1(), readInputFromFile("ProblemInput/2022/Day6SignalCleaning/input")));
-        problemList.add(new ProblemPair(new SignalCleaningPart2(), readInputFromFile("ProblemInput/2022/Day6SignalCleaning/input")));
-        problemList.add(new ProblemPair(new TreeTopHousePart1(), readInputFromFile("ProblemInput/2022/Day8TreeHouse/input")));
-        problemList.add(new ProblemPair(new TreeTopHousePart2(), readInputFromFile("ProblemInput/2022/Day8TreeHouse/input")));
-        problemList.add(new ProblemPair(new RopeBridgePart1(), readInputFromFile("ProblemInput/2022/Day9RopeBridge/input")));
-        problemList.add(new ProblemPair(new CathodeRayTubePart1(), readInputFromFile("ProblemInput/2022/Day10CathodeRay/input")));
     } catch (Exception e) {
         System.out.println("Invalid File Path! Can't read input");
         return;
