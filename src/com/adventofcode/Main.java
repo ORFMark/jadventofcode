@@ -1,5 +1,7 @@
 package com.adventofcode;
 
+import com.adventofcode.problems.twentythree.dayone.TrebuchetPart1;
+import com.adventofcode.problems.twentythree.dayone.TrebuchetPart2;
 import com.adventofcode.problems.twentytwo.day1.CalorieCountingPart1;
 import com.adventofcode.problems.twentytwo.day1.CalorieCountingPart2;
 import com.adventofcode.problems.twentytwo.day10.CathodeRayTubePart1;
@@ -31,7 +33,8 @@ public class Main {
     public static void main(String[] args) {
 	  List<ProblemPair> problemList = new LinkedList<>();
     try {
-        problemList.add(new ProblemPair(new RockPaperScissorsPart1(), readInputFromFile("ProblemInput/2022/Day2RockPaperScissors/input")));
+        problemList.add(new ProblemPair(new TrebuchetPart1(), readInputFromFile("ProblemInput/2023/Day1Trebuchet/input.txt")));
+        problemList.add(new ProblemPair(new TrebuchetPart2(), readInputFromFile("ProblemInput/2023/Day1Trebuchet/input.txt")));
     } catch (Exception e) {
         System.out.println("Invalid File Path! Can't read input");
         return;
